@@ -13,6 +13,15 @@ function randomUpperCase() {
   console.log(upCletter[Math.floor(Math.random() * 26)]);
 }
 
+function randomNumber() {
+  console.log(Num[Math.floor(Math.random() * Num.length)]);
+}
+
+function randomSymbol() {
+  console.log(symb[Math.floor(Math.random() * symb.length)]);
+}
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
