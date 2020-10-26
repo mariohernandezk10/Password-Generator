@@ -5,6 +5,7 @@ var upCletter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var Num = "0123456789"
 var symb = "({';[])-*&^%$#@!~`<>,."
 
+
 function randomLowerCase() {
   console.log(lowCletter[Math.floor(Math.random() * lowCletter.length)]);
 }
@@ -24,7 +25,8 @@ function randomSymbol() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  // var password = generatePassword();
+  prompt("How many characters do you want?")
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
