@@ -23,10 +23,21 @@ function randomSymbol() {
 }
 
 
+var howManyChar = prompt("How many characters do you want?")
+
+var wantLowCase = confirm("Do you want lower case letters?")
+
+var wantUpperCase = confirm("Do you want upper case letters?")
+
+var wantNumbers = confirm("Do you want numbers?")
+
+var wantSymbols = confirm("Do you want symbols?")
+
 // Write password to the #password input
 function writePassword() {
-  // var password = generatePassword();
-  prompt("How many characters do you want?")
+  var password = generatePassword();
+  
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
