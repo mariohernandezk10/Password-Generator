@@ -16,6 +16,8 @@ var wantNumbers = confirm("Do you want numbers?")
 
 var wantSymbols = confirm("Do you want symbols?")
 
+// Make a list of all the characters that wwe will use
+
 function generatePassword() {
   if(wantLowCase) {
     listAllChar = listAllChar.concat(lowCletter)
@@ -30,7 +32,7 @@ function generatePassword() {
     listAllChar = listAllChar.concat(symb);
   
   }
-  // Next, I want to be able to create this password using the variable I created and function
+  // Grab a random character from the list x amount of times
 var newPassword = ""
 // This loop will loop x amount of times
   for (var i = 0; i < howManyChar; i++) {
