@@ -4,24 +4,7 @@ var lowCletter = "abcdefghijklmnopqrstuvwxyz"
 var upCletter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var Num = "0123456789"
 var symb = "({';[])-*&^%$#@!~`<>,."
-
-
-function randomLowerCase() {
-  console.log(lowCletter[Math.floor(Math.random() * lowCletter.length)]);
-}
-
-function randomUpperCase() {
-  console.log(upCletter[Math.floor(Math.random() * 26)]);
-}
-
-function randomNumber() {
-  console.log(Num[Math.floor(Math.random() * Num.length)]);
-}
-
-function randomSymbol() {
-  console.log(symb[Math.floor(Math.random() * symb.length)]);
-}
-
+var passwordString = ""
 
 var howManyChar = prompt("How many characters do you want?")
 
@@ -32,6 +15,35 @@ var wantUpperCase = confirm("Do you want upper case letters?")
 var wantNumbers = confirm("Do you want numbers?")
 
 var wantSymbols = confirm("Do you want symbols?")
+
+function generatePassword() {
+  if(wantLowCase) {
+    listAllChar = listAllChar.concat(lowCletter)
+  }
+  if(wantUpperCase) {
+    listAllChar = listAllChar.concat(upCletter);
+  }
+  if(wantNumbers) {
+    listAllChar = listAllChar.concat(Num)
+  }
+  if(wantSymbols) {
+    listAllChar = listAllChar.concat(symb);
+  
+  }
+  // Next, I want to be able to create this password using the variable I created and function
+var newPassword = ""
+// This loop will loop x amount of times
+  for (var i = 0; i < howManyChar; i++) {
+    
+    // Need a variable that grabs a random character from the list created using the function and loop
+    var grabRandomFromList = listAllChar[Math.floor(Math.grabRandomFromList() * listAllChar.length)]
+    newPassword = newPassword.concat(grabRandomFromList)
+  }
+
+  return newPassword;
+}
+
+
 
 // Write password to the #password input
 function writePassword() {
