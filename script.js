@@ -4,7 +4,7 @@ var lowCletter = "abcdefghijklmnopqrstuvwxyz"
 var upCletter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var Num = "0123456789"
 var symb = "({';[])-*&^%$#@!~`<>,."
-var passwordString = ""
+var listAllChar = ""
 
 var howManyChar = prompt("How many characters do you want?")
 
@@ -16,7 +16,7 @@ var wantNumbers = confirm("Do you want numbers?")
 
 var wantSymbols = confirm("Do you want symbols?")
 
-// Make a list of all the characters that wwe will use
+// Make a list of all the characters that we will use
 
 function generatePassword() {
   if(wantLowCase) {
@@ -38,7 +38,7 @@ var newPassword = ""
   for (var i = 0; i < howManyChar; i++) {
     
     // Need a variable that grabs a random character from the list created using the function and loop
-    var grabRandomFromList = listAllChar[Math.floor(Math.grabRandomFromList() * listAllChar.length)]
+    var grabRandomFromList = listAllChar[Math.floor(Math.random() * listAllChar.length)]
     newPassword = newPassword.concat(grabRandomFromList)
   }
 
