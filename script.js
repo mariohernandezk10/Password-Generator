@@ -30,7 +30,6 @@ function generatePassword() {
   }
   if(wantSymbols) {
     listAllChar = listAllChar.concat(symb);
-  
   }
   // Grab a random character from the list x amount of times
 var newPassword = ""
