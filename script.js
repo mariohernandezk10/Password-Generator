@@ -1,10 +1,15 @@
 // Assignment Code
+// Make a list of all the characters that we will use
+
 var generateBtn = document.querySelector("#generate");
 var lowCletter = "abcdefghijklmnopqrstuvwxyz"
 var upCletter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var Num = "0123456789"
 var symb = "({';[])-*&^%$#@!~`<>,."
 var listAllChar = ""
+
+// using js prompt, we are communicating with the user to create
+// an individualized password
 
 var howManyChar = prompt("How many characters do you want?")
 
@@ -16,7 +21,6 @@ var wantNumbers = confirm("Do you want numbers?")
 
 var wantSymbols = confirm("Do you want symbols?")
 
-// Make a list of all the characters that we will use
 
 function generatePassword() {
   if(wantLowCase) {
